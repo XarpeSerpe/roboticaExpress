@@ -6,6 +6,7 @@ DualMC33926MotorShield robot;
 
 void setup()
 {
+  robot.init();
 }
 
 void loop()
