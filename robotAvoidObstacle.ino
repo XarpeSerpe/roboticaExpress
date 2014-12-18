@@ -22,6 +22,6 @@ void loop()
   }
  else
   {
-    robot.setSpeeds(-200,-200);
+    robot.setSpeeds(0,-200);
   }
 }
