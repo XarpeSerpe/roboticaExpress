@@ -15,7 +15,7 @@ void setup()
 void loop()
 {
  delay(50);
- unsigned int uS = sonar.ping();
+ unsigned int uS = sonar.ping_cm();
  if (uS < 20 || uS == 0)// Si la distancia es mayor de 50 cm, sonar.ping() devuelve 0
   {
     robot.setSpeeds(200,200);
