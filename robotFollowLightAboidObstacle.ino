@@ -23,11 +23,11 @@ void setup()
 void loop()
 {
  delay(50);
- unsigned int uS = sonar.ping_cm();
+ unsigned int distancia = sonar.ping_cm();
  #ifdef DEBUG
-   Serial.println(uS);
+   Serial.println(distancia);
  #endif
- if (uS > 20 || uS == 0)// Si la distancia es mayor de 50 cm, sonar.ping() devuelve 0
+ if (distancia > 20 || distancia == 0)// Si la distancia es mayor de 50 cm, sonar.ping() devuelve 0
   {
     light();  
   }
