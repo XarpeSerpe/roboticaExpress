@@ -1,4 +1,4 @@
-#include "DualMC33926MotorShield.h"
+#include <DualMC33926MotorShield.h>
 #include <NewPing.h>
 #define TRIGGER_PIN  11  // Arduino pin tied to trigger pin on the ultrasonic sensor.
 #define ECHO_PIN     6  // Arduino pin tied to echo pin on the ultrasonic sensor.
@@ -15,8 +15,8 @@ void setup()
 void loop()
 {
  delay(50);
- unsigned int uS = sonar.ping_cm();
- if (uS > 20 || uS == 0)// Si la distancia es mayor de 50 cm, sonar.ping() devuelve 0
+ unsigned int distancia = sonar.ping_cm();
+ if (distancia > 20 || distancia == 0)// Si la distancia es mayor de 50 cm, sonar.ping() devuelve 0
   {
     robot.setSpeeds(200,200);
   }
